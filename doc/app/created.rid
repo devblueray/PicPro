@@ -1,0 +1,14 @@
+Fri, 04 Oct 2013 11:27:19 -0700
+README.rdoc	Thu, 03 Oct 2013 18:01:49 -0700
+app/controllers/application_controller.rb	Thu, 03 Oct 2013 18:01:49 -0700
+app/controllers/customers_controller.rb	Thu, 03 Oct 2013 21:30:09 -0700
+app/controllers/galleries_controller.rb	Fri, 04 Oct 2013 00:07:11 -0700
+app/controllers/portraits_controller.rb	Thu, 03 Oct 2013 23:43:42 -0700
+app/helpers/application_helper.rb	Thu, 03 Oct 2013 18:01:49 -0700
+app/helpers/customers_helper.rb	Thu, 03 Oct 2013 21:30:09 -0700
+app/helpers/galleries_helper.rb	Fri, 04 Oct 2013 00:56:24 -0700
+app/helpers/portraits_helper.rb	Thu, 03 Oct 2013 18:06:40 -0700
+app/models/customer.rb	Thu, 03 Oct 2013 21:30:08 -0700
+app/models/gallery.rb	Thu, 03 Oct 2013 21:37:44 -0700
+app/models/portrait.rb	Thu, 03 Oct 2013 22:58:14 -0700
+app/uploaders/attachment_uploader.rb	Fri, 04 Oct 2013 03:48:52 -0700
