@@ -1,9 +1,6 @@
-p#notice = notice
+ul
+- @customer.each do |c|
+  - @galleries.each do |g|
+      li = link_to g.name, "/portraits/#{ g.name }"
 
-p
-  strong Name:
-  = @gallery.name
 
-= link_to 'Edit', edit_gallery_path(@gallery)
-'|
-= link_to 'Back', galleries_path
