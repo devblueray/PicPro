@@ -1,3 +1,13 @@
+<table>
+<% @portraits.each do |portrait| %>
+		  <tr>
+					 <td><%= portrait.attachment %></td>a
+		  </tr>
+<% end %>
+
+
+
+
 <% if !flash[:notice].blank? %>
   <div class="alert alert-info">
   <%= flash[:notice] %>
