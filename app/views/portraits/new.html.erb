@@ -9,11 +9,12 @@
 <% end %>
 
 <div class="well">
-  <%= form_for @portrait, html: { multipart: true } do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+		  <%= form_for @portrait, html: { multipart: true } do |f| %>
+					 <% @gallery.each do |g| %>
+			         <%= f.text_field :gallery_id, :value => g.id %>
+			 <% end %>
     <%= f.label :attachment %>
-    <%= f.file_field :attachment, multiple: true%>
+    <%= f.file_field :attachment%>
     <%= f.submit "Save", class: "btn btn-primary" %>
   <% end %>
 </div>
