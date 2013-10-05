@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+			redirect_to gallery_path(current_user.name), notice: "logged in!" if current_user
   end
 
   def create
