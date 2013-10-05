@@ -1,15 +1,27 @@
 class GalleriesController < ApplicationController
-  before_action :set_gallery, only: [:show, :edit, :update, :destroy]
+  #before_action :set_gallery, only: [:show, :edit, :update, :destroy]
 
   # GET /galleries
   # GET /galleries.json
   def index
-    @galleries = Gallery.all
+	  
+	 @customer = Customer.where(name: params[:name])
+    @customer.each do |c|
+		c.name
+	   @galleries = Gallery.where(customer_id: c.id)
+	 end
+
   end
 
   # GET /galleries/1
   # GET /galleries/1.json
+  
   def show
+   @customer = Customer.where(name: params[:name])
+    @customer.each do |c|
+      @galleries = Gallery.where(customer_id: c.id)
+    end
+
   end
 
   # GET /galleries/new

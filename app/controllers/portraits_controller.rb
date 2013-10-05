@@ -1,6 +1,9 @@
 class PortraitsController < ApplicationController
   def index
-    @portraits = Portrait.all
+	 @gallery = Gallery.where(name: params[:name])
+	 @gallery.each do |g|
+    @portraits = Portrait.where(gallery_id: g.id)
+	 end
   end
 
   def new
