@@ -1,4 +1,5 @@
 PicPro::Application.routes.draw do
+  resources :sessions
   resources :customers
 
   #resources :galleries
@@ -7,8 +8,8 @@ PicPro::Application.routes.draw do
 	get '/galleries/new/:name', to: 'galleries#new', as: 'newgal'
 	get '/portraits/new/:name', to: 'portraits#new', as: 'newpic'
 	get '/portraits/:name', to: 'portraits#index'
-	get '/galleries/:name', to: 'galleries#show'
-	root "portraits#index"
+	get '/galleries/:name', to: 'galleries#show', as: 'gallery'
+	root "sessions#new"
 		  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
