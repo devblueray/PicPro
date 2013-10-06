@@ -17,7 +17,7 @@ class GalleriesController < ApplicationController
   # GET /galleries/1.json
   
   def show
-   @customer = Customer.where(name: params[:name])
+   @customer = Customer.where(name: current_user.name)
     @customer.each do |c|
       @galleries = Gallery.where(customer_id: c.id)
     end

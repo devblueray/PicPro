@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 			 user.each do |u|
 			 	if u && u.authenticate(params[:password])
 						session[:user_id] = u.id
-						redirect_to gallery_path(current_user.name), notice: "logged in!"
+						redirect_to gallery_path, notice: "logged in!"
 			 	else
 						flash.now.alert = "Invalid Login!"
 						render "new"
